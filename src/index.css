@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes bgAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .bg-gradient-radial {
+    backdrop-filter: blur(100px); /* Updating backdrop-filter */
+    background-color: hsla(0, 0%, 6%, 1);
+    background-image: radial-gradient(
+        at 0% 0%,
+        hsla(213, 100%, 11%, 0.8) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 96% 97%,
+        hsla(183, 87%, 37%, 0.16) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 100%,
+        hsla(240, 90%, 19%, 0.47) 0px,
+        transparent 50%
+      );
+    background-size: 200% 200%; /* Adding background-size for animation */
+    animation: bgAnimation 6s ease infinite;
+    /* Applying keyframes animation */
+  }
+
+  /* text */
+  .bg-gradient-radial2 {
+    display: inline-block;
+    color: transparent;
+    background-color: #99fff3;
+    background-image: radial-gradient(
+        at 61% 57%,
+        hsla(231, 77%, 73%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 69% 64%, hsla(160, 60%, 62%, 1) 0px, transparent 50%);
+  }
+
+  .bg-gradient-radialAbout {
+    backdrop-filter: 40px;
+    background-color: hsla(0, 0%, 0%, 1);
+    background-image: radial-gradient(
+        at 100% 0%,
+        hsla(28, 100%, 74%, 0.38) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 0% 100%,
+        hsla(240, 100%, 70%, 0.41) 0px,
+        transparent 50%
+      );
+  }
+  /* @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } */
+  /* About */
+  /* .bg-gradient-radialAbout {
+    background-color: hsla(232, 0%, 0%, 1);
+    background-image: radial-gradient(
+        at 16% 93%,
+        hsla(247, 99%, 67%, 0.33) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 91% 1%, hsla(27, 93%, 67%, 0.38) 0px, transparent 50%);
+  }
+  @keyframes moveBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .reverse {
+    animation-direction: reverse;
+  }
+
+  .animate-gradient {
+    animation: moveBackground 6s ease infinite;
+    background-size: 200% 200%;
+  } */
+  /* End about */
+
+  /* .bg-gradient-radialAbout1 {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  } */
+
+  /* no */
+  .shooting_star {
+    @apply absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      rgba(95, 145, 255, 1),
+      rgba(0, 0, 255, 0)
+    );
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+    animation: tail 3000ms ease-in-out infinite,
+      shooting 3000ms ease-in-out infinite;
+  }
+
+  .shooting_star::before,
+  .shooting_star::after {
+    @apply absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      -45deg,
+      rgba(0, 0, 255, 0),
+      rgba(95, 145, 255, 1),
+      rgba(0, 0, 255, 0)
+    );
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining 3000ms ease-in-out infinite;
+  }
+
+  @keyframes tail {
+    0% {
+      width: 0;
+    }
+    30% {
+      width: 100px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 30px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(300px);
+    }
+  }
+
+  /* no */
+
+  /* Skills */
+  .skills {
+    animation-name: bgAnimation;
+    background-color: hsla(232, 0%, 0%, 1);
+    background-image: radial-gradient(
+        at 16% 93%,
+        hsla(247, 99%, 67%, 0.33) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 91% 1%, hsla(27, 93%, 67%, 0.38) 0px, transparent 50%);
+  }
+
+  /* tailwind.css or your custom CSS file */
+  @keyframes bgAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* text skills */
+  .bg-gradient-radialText {
+    background-color: blue;
+  }
+  /* text skills */
+  /* end Skills */
+  /* tailwind.css */
+  .btn {
+    @apply w-[150px] h-[40px] border shadow font-semibold rounded-full;
+  }
+
+  /* .btn:hover {
+    @apply bg-blue-600;
+  } */
+  /* overlay */
+  .overlay {
+    background-color: hsla(0, 0%, 0%, 1);
+    background-image: radial-gradient(
+        at 80% 100%,
+        hsla(242, 100%, 70%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 9% 100%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+  }
+  /* end overlay */
+
+  /* Skills */
+  .project {
+    animation-name: bgAnimation;
+    background-color: hsla(232, 0%, 0%, 1);
+    background-image: radial-gradient(
+        at 16% 93%,
+        hsla(247, 99%, 67%, 0.33) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 91% 1%, hsla(27, 93%, 67%, 0.38) 0px, transparent 50%);
+  }
+
+  /* tailwind.css or your custom CSS file */
+  @keyframes bgAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
